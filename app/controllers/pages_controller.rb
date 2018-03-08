@@ -37,4 +37,13 @@ class PagesController < ApplicationController
     render json: {message: message}
   end
 
+  def segment_params_method
+    render json: {message: "hi"}
+  end
+
+  def city_state_method
+    the_city = params["city"]
+    the_state = params["state"]
+    render json: {city: the_city, state: the_state}
+  end
 end
