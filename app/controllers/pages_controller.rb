@@ -49,7 +49,7 @@ class PagesController < ApplicationController
 
   def number_segment_params
     answer = 76
-    user_guess = params["segment_params"].to_i
+    user_guess = params["user_guess"].to_i
 
     if answer == user_guess
       message = "good job"
