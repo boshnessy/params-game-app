@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/name' => 'pages#show_name'
+  get '/name_url' => 'pages#show_name'
 end
