@@ -46,4 +46,17 @@ class PagesController < ApplicationController
     the_state = params["state"]
     render json: {city: the_city, state: the_state}
   end
+
+  def number_segment_params
+    answer = 76
+    user_guess = params["segment_params"].to_i
+
+    if answer == user_guess
+      message = "good job"
+    else
+      message = "you suck"
+    end
+
+    render json: {message: message}
+  end
 end
